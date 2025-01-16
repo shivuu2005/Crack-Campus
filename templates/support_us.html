@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Me - Buy Me A Coffee</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function updateUPI() {
+            // Get the entered amount
+            var amount = document.getElementById("amountInput").value;
+            
+            // Check if amount is a valid number
+            if (isNaN(amount) || amount <= 0) {
+                alert("Please enter a valid amount.");
+                return;
+            }
+            
+            // Update the UPI link dynamically with the entered amount
+            var upiLink = document.getElementById("upiLink");
+            upiLink.href = `intent://pay?pa=9584944475@ybl&pn=P2P&mc=0000&am=${amount}&cu=INR#Intent;scheme=upi;end`;
+        }
+    </script>
+    <style>
+        /* Add smooth transition for hover effect */
+        .upi-link {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .upi-link:hover {
+            transform: scale(1.1); /* Slightly enlarges the link */
+            color: #ff6f61; /* Color change on hover */
+        }
+
+        .upi-link:active {
+            transform: scale(1.05); /* Slight shrink effect when clicked */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-pink-400 to-purple-300 flex justify-center items-center min-h-screen px-4 sm:px-8 lg:px-16">
+    <!-- Container with adjusted width for large screens -->
+    <div class="bg-white bg-opacity-80 p-6 sm:p-8 lg:p-10 rounded-lg shadow-xl w-full max-w-xl lg:max-w-2xl mx-auto">
+        <!-- Title Section -->
+        <div class="text-center mb-6">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-transparent bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text mb-4">
+                Support Me with a Coffee!
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-700 mb-4">
+                If you enjoy the content I create and would like to support me in a simple, fun way, buying me a coffee is the perfect way to show your appreciation!
+            </p>
+        </div>
+
+        <!-- Content Section -->
+        <div class="text-lg sm:text-xl text-gray-700 mb-8">
+            <div class="text-center mb-6">
+                <img src="../images/qr.png" alt="Scan to support me" class="w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 mx-auto mb-6">
+            </div>
+
+            <div class="text-center mb-6">
+                <p class="mb-4">
+                    You can also support me by scanning the QR code above or by clicking the button below to pay via UPI. Simply enter the amount you'd like to contribute, and you'll be taken to your UPI app to complete the payment.
+                </p>
+            </div>
+
+            <!-- Amount Input Field -->
+            <div class="mb-6 text-center">
+                <label for="amountInput" class="block text-xl sm:text-2xl text-gray-700 mb-2">Enter Amount (INR):</label>
+                <input type="number" id="amountInput" class="p-3 border rounded-lg text-xl sm:text-2xl" placeholder="Enter amount" min="1" step="0.01">
+            </div>
+
+            <!-- UPI Payment Link Section -->
+            <div class="text-center mb-4">
+                <a id="upiLink" href="#" 
+                   class="inline-block text-xl sm:text-2xl text-white bg-pink-500 hover:bg-purple-700 hover:text-white py-3 px-6 rounded-full font-medium transition duration-300" 
+                   target="_blank" 
+                   onclick="updateUPI()">
+                    Pay via UPI
+                </a>
+            </div>
+
+            <!-- Copy UPI Payment Link Section with Animation -->
+            <div class="text-center mb-8">
+                <a href="upi://pay?pa=9584944475@ybl&pn=P2P&mc=0000&cu=INR" 
+                   class="upi-link text-xl sm:text-2xl text-gray-700 font-medium hover:text-pink-500 transition-transform duration-300 ease-in-out hover:scale-105" 
+                   target="_blank" 
+                   onclick="alert('Click to copy this link and open it in your mobile UPI app!')">
+                    Copy UPI Payment Link
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="text-center mb-8">
+            <p class="text-gray-700 text-sm sm:text-lg mb-4">
+                All donations will be used for <b class="font-bold text-pink-500">improving my projects and learning</b>. Thank you for being awesome!
+            </p>
+        </div>
+
+        <!-- Buy Me A Coffee Button -->
+        <div class="text-center mb-8">
+            <a href="https://buymeacoffee.com/p2pweb" target="_blank" class="bg-pink-500 text-white py-3 px-8 rounded-full text-lg sm:text-xl hover:bg-purple-600 transition duration-300 ease-in-out">
+                Buy Me A Coffee
+            </a>
+        </div>
+
+        <!-- Supporting Text -->
+        <div class="text-center text-gray-700 text-md sm:text-lg">
+            <p class="mb-4">
+                💖 Your support means the world to me and helps me continue working on exciting new projects. Whether it's for my coding tutorials, blog posts, or creative work, your contributions keep me motivated to bring you even better content.
+            </p>
+            <p>
+                You can contribute as little or as much as you'd like, and every "coffee" gets me one step closer to creating even more exciting things for you. Thank you so much for being a part of this journey. 🌟
+            </p>
+        </div>
+    </div>
+</body>
+</html>

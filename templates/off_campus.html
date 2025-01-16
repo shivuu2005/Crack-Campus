@@ -1,0 +1,381 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Preparation Hub</title>
+    <!-- Add Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    
+        .slide-down {
+            display: block;
+            animation: slide-down 0.3s ease-in-out;
+        }
+    
+        @keyframes slide-down {
+            from {
+                transform: translateY(-20%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-purple-100 to-pink-100">
+
+    <header class="bg-gradient-to-r from-purple-700 to-pink-700 text-white p-4 flex justify-between items-center shadow-md sticky top-0 z-50">
+        <!-- Logo Section -->
+    <div class="flex items-center justify-center">
+        <img src="../images/logo2.png" alt="Logo" class="w-40 h-auto" />
+    </div>
+    <!-- Navigation bar for desktop -->
+    <nav class="hidden md:flex gap-6">
+        <a href="../index.html" class="flex items-center space-x-2 px-4 py-2 text-lg font-bold hover:bg-purple-800">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/home.png" alt="Home Icon" class="w-5 h-5">
+            <span>Home</span>
+        </a>
+  
+        <a href="../templates/features.html" class="flex items-center space-x-2 px-4 py-2 text-lg font-bold hover:bg-purple-800">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/light-on.png" alt="Features Icon" class="w-5 h-5">
+            <span>Resources</span>
+        </a>
+        <a href="../templates/contact_us.html" class="flex items-center space-x-2 px-4 py-2 text-lg font-bold hover:bg-purple-800">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/contacts.png" alt="Contact Icon" class="w-5 h-5">
+            <span>Contact Us</span>
+        </a>
+
+              <a href="../templates/about_us.html" class="flex items-center space-x-2 px-4 py-2 text-lg font-bold hover:bg-purple-800">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/about.png" alt="About Icon" class="w-5 h-5">
+            <span>About Us</span>
+        </a>
+        <a href="../templates/support_us.html" class="flex items-center space-x-2 px-4 py-2 text-lg font-bold hover:bg-purple-800">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.64 12.64c-.7.58-1.42 1.16-2.12 1.74-2.66-3.18-7.22-3.36-9.44-.7-2.72 2.7-6.18 1.39-6.18-1.82V7.56c0-3.21 5.56-4.8 8.1-2.72 3.03 2.26 3.36 6.7 1.92 9.44z" />
+          </svg>
+            <span>Support us</span>
+        </a>
+        <a href="../templates/login.html" class="flex items-center space-x-2 px-4 py-2 text-lg font-bold hover:bg-purple-800">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/login-rounded-right.png" alt="Login Icon" class="w-5 h-5">
+            <span>Login</span>
+        </a>
+    </nav>
+     <!-- Hamburger menu for mobile -->
+     <div class="md:hidden flex items-center" id="hamburger-menu">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/menu.png" alt="Hamburger Icon" class="w-8 h-8 cursor-pointer">
+    </div>
+   </header>
+   
+   <!-- Mobile menu -->
+   <div
+    id="nav-links"
+    class="md:hidden hidden transition-all duration-300 ease-in-out bg-purple-700 shadow-md z-50 fixed top-16 left-0 w-full"
+   >
+    <!-- Close Button -->
+    <div class="flex justify-end p-4">
+        <button id="close-menu" class="text-white text-lg font-bold">×</button>
+    </div>
+    <a href="../index.html" class="flex items-center px-6 py-4 text-lg font-bold text-white hover:bg-purple-800">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7m-9 9v-6h4v6m5-15h3m-6 0h3m-6 0h3m-6 0h3M3 12v7m3 0v-7m0 7v-7" />
+        </svg>
+        Home
+    </a>
+    <a href="../templates/features.html" class="flex items-center px-6 py-4 text-lg font-bold text-white hover:bg-purple-800">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m-1-4h2m-4 8h2a2 2 0 010 4h-2m6 0h-2a2 2 0 110-4h2m2-6a2 2 0 11-4 0m-4 0a2 2 0 114 0" />
+        </svg>
+        Resources
+    </a>
+    <a href="../templates/about_us.html" class="flex items-center px-6 py-4 text-lg font-bold text-white hover:bg-purple-800">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16h6m-2-6a4 4 0 110-8 4 4 0 010 8z" />
+        </svg>
+        About Us
+    </a>
+    <a href="../templates/contact_us.html" class="flex items-center px-6 py-4 text-lg font-bold text-white hover:bg-purple-800">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h11M9 21V3m12 8h-9m0 0a9 9 0 019 9m-9-9a9 9 0 00-9 9" />
+        </svg>
+        Contact Us
+    </a>
+    <a href="../templates/support_us.html" class="flex items-center px-6 py-4 text-lg font-bold text-white hover:bg-purple-800">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M20.64 12.64c-.7.58-1.42 1.16-2.12 1.74-2.66-3.18-7.22-3.36-9.44-.7-2.72 2.7-6.18 1.39-6.18-1.82V7.56c0-3.21 5.56-4.8 8.1-2.72 3.03 2.26 3.36 6.7 1.92 9.44z" />
+      </svg>
+        Support Us
+      </a>
+    <a href="../templates/login.html" class="flex items-center px-6 py-4 text-lg font-bold text-white hover:bg-purple-800">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 0V7m0 10v-6" />
+        </svg>
+        Login
+    </a> </div>
+
+
+ 
+<section class="py-12 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-semibold text-center text-gray-900 mb-8">Company Hiring Information</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full table-auto bg-white shadow-md rounded-lg border-separate border-spacing-0">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-sm font-medium text-gray-500">Company Name</th>
+                        <th class="px-6 py-3 text-left text-sm font-medium text-gray-500">Salary Range</th>
+                        <th class="px-6 py-3 text-left text-sm font-medium text-gray-500">Interview Pattern</th>
+                        <th class="px-6 py-3 text-left text-sm font-medium text-gray-500">Hiring Months</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-700">
+                    <tr>
+                        <td class="px-6 py-4 text-sm font-medium">Infosys</td>
+                        <td class="px-6 py-4 text-sm">3.6 - 9.5 LPA [3 brackets]</td>
+                        <td class="px-6 py-4 text-sm">Varies for all roles</td>
+                        <td class="px-6 py-4 text-sm">Feb-May [Start of fourth year]</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                        <td class="px-6 py-4 text-sm font-medium">TCS</td>
+                        <td class="px-6 py-4 text-sm">3.36 - 7.2 LPA</td>
+                        <td class="px-6 py-4 text-sm">Varies for all roles</td>
+                        <td class="px-6 py-4 text-sm">June and April [Start of 4th year]</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 text-sm font-medium">Cognizant</td>
+                        <td class="px-6 py-4 text-sm">4 - 6.8 LPA</td>
+                        <td class="px-6 py-4 text-sm">Round 1: Mcq + Coding + SQL queries, Round 2: Technical Interview, Round 3: HR Interview</td>
+                        <td class="px-6 py-4 text-sm">August</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                        <td class="px-6 py-4 text-sm font-medium">Ericsson</td>
+                        <td class="px-6 py-4 text-sm">3.5 - 4.5 LPA</td>
+                        <td class="px-6 py-4 text-sm">Round 1: Mcq + Aptitude, Round 2: Technical Interview, Round 3: HR Interview</td>
+                        <td class="px-6 py-4 text-sm">March [Start of 4th year]</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 text-sm font-medium">Juspay</td>
+                        <td class="px-6 py-4 text-sm">25+ LPA</td>
+                        <td class="px-6 py-4 text-sm">Round 1: Aptitude + Coding, Round 2: Technical Interview 1, Round 3: Technical Interview 2, Round 4: Hiring Manager Interview</td>
+                        <td class="px-6 py-4 text-sm">Year Round, mostly during start of 4th year</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                        <td class="px-6 py-4 text-sm font-medium">Yellow</td>
+                        <td class="px-6 py-4 text-sm">N/A</td>
+                        <td class="px-6 py-4 text-sm">N/A</td>
+                        <td class="px-6 py-4 text-sm">August-September</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 text-sm font-medium">Cozeva</td>
+                        <td class="px-6 py-4 text-sm">N/A</td>
+                        <td class="px-6 py-4 text-sm">N/A</td>
+                        <td class="px-6 py-4 text-sm">Jan - Feb</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                        <td class="px-6 py-4 text-sm font-medium">Netmeds</td>
+                        <td class="px-6 py-4 text-sm">6.4 - 10 LPA</td>
+                        <td class="px-6 py-4 text-sm">N/A</td>
+                        <td class="px-6 py-4 text-sm">Aug-Dec and April</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 text-sm font-medium">HashedIn</td>
+                        <td class="px-6 py-4 text-sm">8 LPA</td>
+                        <td class="px-6 py-4 text-sm">Round 1: Mcq + Coding Test, Round 2: Technical Interview 1, Round 3: Technical Interview 2, Round 4: HR Interview</td>
+                        <td class="px-6 py-4 text-sm">January, opens 2-3 times a year for freshers</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                        <td class="px-6 py-4 text-sm font-medium">Rakuten</td>
+                        <td class="px-6 py-4 text-sm">6 - 10 LPA</td>
+                        <td class="px-6 py-4 text-sm">Round 1: Mcq + Coding Test, Round 2: Technical Interview 1, Round 3: Technical Interview 2, Round 4: HR Interview</td>
+                        <td class="px-6 py-4 text-sm">Aug-Jan</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 text-sm font-medium">JP Morgan</td>
+                        <td class="px-6 py-4 text-sm">16 - 25 LPA</td>
+                        <td class="px-6 py-4 text-sm">Round 1: Coding Test, Round 2: Technical Interview 1, Round 3: Technical Interview 2, Round 4: HR Interview</td>
+                        <td class="px-6 py-4 text-sm">March and September, applications open in October for new grad roles</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                        <td class="px-6 py-4 text-sm font-medium">Flipkart/Phonepe</td>
+                        <td class="px-6 py-4 text-sm">22+ LPA</td>
+                        <td class="px-6 py-4 text-sm">Round 1: Online Coding Round, Round 2: Technical Interview 1, Round 3: Technical Interview 2, Round 4: Managerial Interview, Round 5: HR Interview</td>
+                        <td class="px-6 py-4 text-sm">Post January</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 text-sm font-medium">Barclays</td>
+                        <td class="px-6 py-4 text-sm">16 - 20 LPA</td>
+                        <td class="px-6 py-4 text-sm">Round 1: Mcq + Coding Test, Round 2: Technical + HR Interview</td>
+                        <td class="px-6 py-4 text-sm">November for New Grad roles</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                        <td class="px-6 py-4 text-sm font-medium">Netflix</td>
+                        <td class="px-6 py-4 text-sm">37 LPA</td>
+                        <td class="px-6 py-4 text-sm">N/A</td>
+                        <td class="px-6 py-4 text-sm">November for New Grad roles</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 text-sm font-medium">Bharatpe</td>
+                        <td class="px-6 py-4 text-sm">16 LPA</td>
+                        <td class="px-6 py-4 text-sm">N/A</td>
+                        <td class="px-6 py-4 text-sm">January</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                        <td class="px-6 py-4 text-sm font-medium">Dailyrounds</td>
+                        <td class="px-6 py-4 text-sm">N/A</td>
+                        <td class="px-6 py-4 text-sm">N/A</td>
+                        <td class="px-6 py-4 text-sm">April</td>
+                    </tr>
+                     <!-- Accolite -->
+                     <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Accolite</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">6-8 LPA</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Round 1: Aptitude + Coding Round<br>Round 2: Technical Interview 1<br>Round 3: Technical Interview 2 + Hr Interview</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">April - May</td>
+                    </tr>
+                    <!-- Atlassian -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Atlassian</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">42 LPA</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Round 1: Coding Test<br>Round 2: Technical Interview 1<br>Round 3: Technical Interview 2<br>Round 4: Hr Interview</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Post January Keep an eye on its career portal</td>
+                    </tr>
+                    <!-- Urban Ladder -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Urban Ladder</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">12 - 15 LPA</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"></td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">June, December [For 6 months intern]</td>
+                    </tr>
+                    <!-- Urban Company -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Urban Company</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">14-18 LPA</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Round 1: Coding Test<br>Round 2: Technical Interview 1<br>Round 3: Technical Interview 2<br>Round 4: Technical+Hr Interview</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Jan - April</td>
+                    </tr>
+                    <!-- Hackerearth -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Hackerearth</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">14.7 - 16 LPA</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Round 1: Coding Test<br>Round 2: Technical Interview<br>Round 3: Technical Interview</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Hires winter and summer 6-month engineering interns and gives performance-based PPOs.</td>
+                    </tr>
+                    <!-- Hackerrank -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Hackerrank</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">16 LPA</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Round 1: Coding Test<br>Round 2: Technical Interview</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">April, October hires 6 months interns and gives performance-based PPOs</td>
+                    </tr>
+                    <!-- GS -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">GS</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">~20 Lpa</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Round 1: Aptitude + Coding Round<br>Round 2: Technical Interview 1<br>Round 3: Technical Interview 2<br>Round 4: Technical + Hr Interview</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Campus hiring challenge and keep checking the careers page for new grad applications region-wise: APAC , EMEA, US etc.</td>
+                    </tr>
+                    <!-- Uber -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Uber</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">30+ LPA</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Round 1: Coding Test<br>Round 2: Technical Interview DSA<br>Round 3: System design<br>Round 4: Managerial + Hr + Technical</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Feb - May [end of 4th year]</td>
+                    </tr>
+                    <!-- Morgan Stanley -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Morgan Stanley</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">15 LPA</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Round 1: Coding + Debugging + Aptitude<br>Round 2: Technical Interview<br>Round 3: Hr Interview</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Jan - March</td>
+                    </tr>
+                    <!-- Bank of America -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Bank of America</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">8.5 LPA</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"></td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">February for FTE roles</td>
+                    </tr>
+
+                    <tr>
+    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Trilogy</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">30+ LPA</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Round 1: Coding Drive<br>Round 2: Technical Interview 1<br>Round 3: Technical Interview 2<br>Round 4: Technical Interview</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">August, Jan, April</td>
+</tr>
+<tr>
+    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Expedia</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">14.5 LPA</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Round 1: Coding Test + Mcq<br>Round 2: Technical Interview 1 (DSA)<br>Round 3: Technical Interview 2 (System Design)<br>Round 4: Behavioral Interview</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Jan - March</td>
+</tr>
+<tr>
+    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Github</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">13 - 17 LPA</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Less probability</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"></td>
+</tr>
+<tr>
+    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Microsoft</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">40+ LPA</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Round 1: Coding Test<br>Round 2: Technical Interview 1<br>Round 3: Technical Interview 2<br>Round 4: Tech + HR Interview</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">May-June, Oct</td>
+</tr>
+<tr>
+    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">MAQ Software</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">6 - 8 LPA</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Round 1: Coding Test + Aptitude<br>Round 2: Technical Interview 1<br>Round 3: Technical + HR Interview</td>
+    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">March - May</td>
+</tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Footer -->
+<footer class="bg-purple-700 text-white text-center py-4 mt-8">
+    <p>&copy; 2025 Placement Preparation Hub. All rights reserved. <br> For more information, visit our <a href="#" class="text-pink-300 hover:underline">Privacy Policy</a>.</p>
+</footer>
+
+<script>
+    // Get references to the hamburger icon, close button, and the navigation menu
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navLinks = document.getElementById('nav-links');
+    const closeMenu = document.getElementById('close-menu');
+
+    // Toggle the menu on hamburger icon click
+    hamburgerMenu.addEventListener('click', () => {
+        navLinks.classList.remove('hidden');
+        navLinks.classList.add('slide-down');
+    });
+
+    // Close the menu on close button click
+    closeMenu.addEventListener('click', () => {
+        navLinks.classList.add('hidden');
+        navLinks.classList.remove('slide-down');
+    });
+
+    // Close the menu when clicking outside of it
+    document.addEventListener('click', (event) => {
+        if (
+            !navLinks.contains(event.target) &&
+            !hamburgerMenu.contains(event.target)
+        ) {
+            navLinks.classList.add('hidden');
+            navLinks.classList.remove('slide-down');
+        }
+    });
+</script>
+
+
+</body>
+</html>
