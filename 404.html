@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(-10px);
+            }
+            50% {
+                transform: translateY(10px);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-purple-500 to-pink-500 text-white min-h-screen flex flex-col items-center justify-center">
+
+    <!-- 404 Content -->
+    <div class="text-center mb-6">
+        <h1 
+            class="text-9xl font-bold animate-[bounce_2s_infinite]">
+            404
+        </h1>
+        <p class="text-2xl mt-4">
+            Oops! The page you're looking for cannot be found.
+        </p>
+    </div>
+
+    <!-- Centered Video -->
+    <div class="flex justify-center items-center">
+        <video 
+            class="w-[400px] max-w-full h-auto border-4 border-white rounded-lg shadow-lg" 
+            autoplay loop muted>
+            <source src="./images/error_404.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Back to Home -->
+    <p class="mt-6">
+        <a href="index.html" class="text-lg underline hover:text-pink-200">
+            Go back to Home
+        </a>
+    </p>
+
+</body>
+</html>

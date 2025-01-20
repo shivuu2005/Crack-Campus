@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Enhanced styles for better user experience */
+        .dropdown { display: none; }
+        .dropdown.show { display: block; }
+        .subject-btn, .resource-btn {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .subject-btn:hover, .resource-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-violet-500 to-pink-500 min-h-screen flex flex-col items-center">
+    <header class="text-white text-center mt-8">
+        <h1 class="text-4xl font-bold mb-4">EE Study Material</h1>
+        <p class="text-lg">Select a semester to view resources</p>
+    </header>
+
+    <div class="w-11/12 sm:w-3/4 lg:w-2/3 bg-white p-6 mt-8 rounded-lg shadow-md">
+        <!-- Semester Selection -->
+        <div id="semesters" class="mb-6">
+            <button onclick="toggleSection('semesters')" class="w-full text-left text-lg font-semibold text-violet-700 hover:text-violet-500">
+                Select Semester
+            </button>
+            <div class="mt-2 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-4">
+                <!-- Semester Buttons with Dropdown -->
+                <div class="relative">
+                    <button onclick="toggleDropdown(event, 'dropdown-sem1')" class="px-4 py-2 w-full text-lg font-semibold text-white bg-violet-700 hover:bg-violet-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500">
+                        Semester 1
+                    </button>
+                    <div id="dropdown-sem1" class="dropdown bg-white rounded-lg shadow-md mt-2 py-2">
+                        <a href=" ../EE/eesem1/eesem1pyqs.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">PYQ</a>
+                        <a href="../sy1,2/cse1,2.pdf" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">SYLLABUS</a>
+                        <a href="../comingsoon.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">NOTES</a>
+                    </div>
+                </div>
+
+                <!--   semesters 2-->
+                <div class="relative">
+                    <button onclick="toggleDropdown(event, 'dropdown-sem2')" class="px-4 py-2 w-full text-lg font-semibold text-white bg-violet-700 hover:bg-violet-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500">
+                        Semester 2
+                    </button>
+                    <div id="dropdown-sem2" class="dropdown bg-white rounded-lg shadow-md mt-2 py-2">
+                        <a href=" ../EE/eesem2/eesem2pyqs.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">PYQ</a>
+                        <a href="../sy1,2/cse1,2.pdf" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">SYLLABUS</a>
+                        <a href="../comingsoon.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">NOTES</a>
+                    </div>
+                </div>
+                <!--   semesters 3-->
+                <div class="relative">
+                    <button onclick="toggleDropdown(event, 'dropdown-sem3')" class="px-4 py-2 w-full text-lg font-semibold text-white bg-violet-700 hover:bg-violet-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500">
+                        Semester 3
+                    </button>
+                    <div id="dropdown-sem3" class="dropdown bg-white rounded-lg shadow-md mt-2 py-2">
+                        <a href=" ../EE/eesem3/eesem3pyqs.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">PYQ</a>
+                        <a href="../EE/eesyllabus/ee3.pdf" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">SYLLABUS</a>
+                        <a href="../comingsoon.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">NOTES</a>
+                    </div>
+                </div>
+                <!--   semesters 4-->
+                <div class="relative">
+                    <button onclick="toggleDropdown(event, 'dropdown-sem4')" class="px-4 py-2 w-full text-lg font-semibold text-white bg-violet-700 hover:bg-violet-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500">
+                        Semester 4
+                    </button>
+                    <div id="dropdown-sem4" class="dropdown bg-white rounded-lg shadow-md5mt-2 py-2">
+                        <a href=" ../EE/eesem4/eesem4pyqs.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">PYQ</a>
+                        <a href="../EE/eesyllabus/ee4.pdf"  class="block px-4 py-2 text-gray-700 hover:bg-gray-100">SYLLABUS</a>
+                        <a href="../comingsoon.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">NOTES</a>
+                    </div>
+                </div>
+                <!--   semesters 5-->
+                <div class="relative">
+                    <button onclick="toggleDropdown(event, 'dropdown-sem5')" class="px-4 py-2 w-full text-lg font-semibold text-white bg-violet-700 hover:bg-violet-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500">
+                        Semester 5
+                    </button>
+                    <div id="dropdown-sem5" class="dropdown bg-white rounded-lg shadow-md mt-2 py-2">
+                        <a href=" ../EE/eesem5/eesem5pyqs.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">PYQ</a>
+                        <a href="../EE/eesyllabus/ee5.pdf" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">SYLLABUS</a>
+                        <a href="../comingsoon.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">NOTES</a>
+                    </div>
+                </div>
+                <!--   semesters 6-->
+                <div class="relative">
+                    <button onclick="toggleDropdown(event, 'dropdown-sem6')" class="px-4 py-2 w-full text-lg font-semibold text-white bg-violet-700 hover:bg-violet-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500">
+                        Semester 6
+                    </button>
+                    <div id="dropdown-sem6" class="dropdown bg-white rounded-lg shadow-md mt-2 py-2">
+                        <a href=" ../EE/eesem6/eesem6pyqs.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">PYQ</a>
+                        <a href="../EE/eesyllabus/ee6.pdf"  class="block px-4 py-2 text-gray-700 hover:bg-gray-100">SYLLABUS</a>
+                        <a href="../comingsoon.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">NOTES</a>
+                    </div>
+                </div>
+                <!--   semesters 7-->
+                <div class="relative">
+                    <button onclick="toggleDropdown(event, 'dropdown-sem7')" class="px-4 py-2 w-full text-lg font-semibold text-white bg-violet-700 hover:bg-violet-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500">
+                        Semester 7
+                    </button>
+                    <div id="dropdown-sem7" class="dropdown bg-white rounded-lg shadow-md mt-2 py-2">
+                        <a href=" ../EE/eesem7/eesem7pyqs.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">PYQ</a>
+                        <a href="../EE/eesyllabus/ee7.pdf"  class="block px-4 py-2 text-gray-700 hover:bg-gray-100">SYLLABUS</a>
+                        <a href="../comingsoon.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">NOTES</a>
+                    </div>
+                    <!--   semesters 8-->
+                </div>
+                <div class="relative">
+                    <button onclick="toggleDropdown(event, 'dropdown-sem8')" class="px-4 py-2 w-full text-lg font-semibold text-white bg-violet-700 hover:bg-violet-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500">
+                        Semester 8
+                    </button>
+                    <div id="dropdown-sem8" class="dropdown bg-white rounded-lg shadow-md mt-2 py-2">
+                        <a href=" ../EE/eesem8/eesem8pyqs.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">PYQ</a>
+                        <a href="../EE/eesyllabus/ee8.pdf"  class="block px-4 py-2 text-gray-700 hover:bg-gray-100">SYLLABUS</a>
+                        <a href="../comingsoon.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">NOTES</a>
+                    </div>
+                </div>
+                
+                
+
+                <!-- Repeat for other semesters -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle dropdown visibility on click
+        function toggleDropdown(event, dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            const allDropdowns = document.querySelectorAll('.dropdown');
+            
+            // Close all dropdowns except the clicked one
+            allDropdowns.forEach(d => {
+                if (d !== dropdown) {
+                    d.classList.remove('show');
+                }
+            });
+
+            // Toggle the visibility of the clicked dropdown
+            dropdown.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
