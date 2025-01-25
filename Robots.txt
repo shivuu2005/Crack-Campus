@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://crackcampus.com/sitemap.xml
